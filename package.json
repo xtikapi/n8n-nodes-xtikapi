@@ -1,0 +1,56 @@
+{
+  "name": "n8n-nodes-xtikapi",
+  "version": "0.1.0",
+  "description": "Official n8n community node for XTikAPI — read public posts, videos, comments, profiles, and trends across 19 social platforms (Douyin, Xiaohongshu, WeChat, TikTok, YouTube, Instagram, X, Reddit).",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "xtikapi",
+    "social-media-api",
+    "douyin",
+    "xiaohongshu",
+    "tiktok",
+    "wechat",
+    "youtube",
+    "instagram",
+    "twitter",
+    "reddit"
+  ],
+  "license": "MIT",
+  "homepage": "https://xtikapi.com",
+  "author": {
+    "name": "XTikAPI",
+    "email": "support@xtikapi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtikapi/n8n-nodes-xtikapi.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cp nodes/XTikApi/xtikapi.svg dist/nodes/XTikApi/xtikapi.svg",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/XTikApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/XTikApi/XTikApi.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "n8n-workflow": "^1.82.0",
+    "typescript": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
